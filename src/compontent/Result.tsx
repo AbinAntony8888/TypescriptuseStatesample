@@ -1,19 +1,18 @@
 import { useState } from "react";
 import Sample from "./Sample";
-
-export default function Result(){
-    const [number,setNumber]=useState(0)
-      const add=()=>{
-        setNumber(number+1)  
-     }
-        const sub=()=>{
-         setNumber(number-1)
-        }      
-  
+import React from "react";
+import App from "../App";
+type resultProp={
+    num:number;
+}
+export default function Result({num}:resultProp){
     return(
        
         <div>
-       <Sample number={number} add={add} sub={sub} />
+            
+            <div className="bg-[#e2e2e2] text-[#272781] text-xl p-5">{num}</div>
+            {/* <Sample ad={""} su={}/> */}
+            
         </div>
     )
 }
